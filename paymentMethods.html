@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Shop | Payment Methods page</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="./checkout.html">
+      <svg
+        class="ml-4 mt-8"
+        width="17"
+        height="15"
+        viewBox="0 0 17 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.9998 7.00029C16.9998 7.2655 16.8945 7.51986 16.7069 7.70739C16.5194 7.89493 16.2651 8.00029 15.9998 8.00029H4.41383L8.70783 12.2923C8.80081 12.3853 8.87456 12.4956 8.92488 12.6171C8.9752 12.7386 9.0011 12.8688 9.0011 13.0003C9.0011 13.1318 8.9752 13.262 8.92488 13.3835C8.87456 13.5049 8.80081 13.6153 8.70783 13.7083C8.61486 13.8013 8.50448 13.875 8.383 13.9253C8.26152 13.9757 8.13132 14.0015 7.99983 14.0015C7.86835 14.0015 7.73815 13.9757 7.61667 13.9253C7.49519 13.875 7.38481 13.8013 7.29183 13.7083L1.29183 7.70829C1.19871 7.6154 1.12482 7.50504 1.07441 7.38355C1.024 7.26206 0.998047 7.13182 0.998047 7.00029C0.998047 6.86875 1.024 6.73851 1.07441 6.61702C1.12482 6.49553 1.19871 6.38518 1.29183 6.29229L7.29183 0.292287C7.47961 0.104514 7.73428 -0.000976562 7.99983 -0.000976562C8.26539 -0.000976562 8.52006 0.104514 8.70783 0.292287C8.89561 0.48006 9.0011 0.734735 9.0011 1.00029C9.0011 1.26584 8.89561 1.52051 8.70783 1.70829L4.41383 6.00029H15.9998C16.2651 6.00029 16.5194 6.10564 16.7069 6.29318C16.8945 6.48072 16.9998 6.73507 16.9998 7.00029Z"
+          fill="black"
+        />
+      </svg>
+    </a>
+      <div class="flex justify-between">
+        <p class="ml-11 font-bold" style="margin-top: -1.3rem">
+          Choose Shipping
+        </p>
+        <img
+          class="mr-5"
+          style="margin-top: -0.9rem"
+          width="20"
+          height="20"
+          src="https://img.icons8.com/ios/50/add--v1.png"
+          alt="add--v1"
+        /></div
+    >
+    <p class="ml-5 mt-4 text-xs">Select the payment method you want to use.</p>
+    <div class="grid grid-cols-1 gap-2">
+      <div
+        class="p-1 rounded-2xl ml-3 mt-5 py-3"
+        style="
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          width: 17rem;
+        "
+      >
+        <div class="flex gap-3">
+          <img
+            class="ml-4"
+            width="23"
+            height="48"
+            src="https://img.icons8.com/fluency-systems-filled/48/wallet.png"
+            alt="wallet"
+          />
+          <div>
+            <h5 class="font-medium text-sm mt-1">My Wallet</h5>
+          </div>
+          <div class="flex gap-2 font-medium mt-1 ml-14">
+            <label for="wallet" class="text-sm">$9,379</label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="wallet"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="p-1 rounded-2xl ml-3 mt-5 py-3"
+        style="
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          width: 17rem;
+        "
+      >
+        <div class="flex gap-3">
+            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0 0 48 48">
+                <path fill="#1565C0" d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z"></path><path fill="#039BE5" d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102C42.18,16.106,37.358,13.019,33.183,12.994z"></path><path fill="#283593" d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882C33.166,12.993,33.148,13,33.132,13H19.66z"></path>
+                </svg>
+          <div>
+            <h5 class="font-medium text-sm mt-1">PayPal</h5>
+          </div>
+          <div class="flex gap-2 font-medium mt-1" style=" margin-left: 8.2rem;
+          ">
+            <input
+              class="checked-input"
+              type="radio"
+              id="PayPal"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+      class="p-1 rounded-2xl ml-3 mt-5 py-3"
+      style="
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 17rem;
+      "
+    >
+      <div class="flex gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" class="ml-4" viewBox="0 0 48 48">
+            <path fill="#fbc02d" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#e53935" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4caf50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1565c0" d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+            </svg>
+        <div>
+          <h5 class="font-medium text-sm mt-1 w-20">Google Pay</h5>
+        </div>
+        <div class="flex gap-2 font-medium mt-1" style="margin-left:5.7rem">
+          <input
+            class="checked-input"
+            type="radio"
+            id="PayPal"
+            name="shipping-type"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="p-1 rounded-2xl ml-3 mt-5 py-3"
+      style="
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 17rem;
+      "
+    >
+      <div class="flex gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="ml-4" width="23" height="23" viewBox="0 0 30 30">
+            <path d="M25.565,9.785c-0.123,0.077-3.051,1.702-3.051,5.305c0.138,4.109,3.695,5.55,3.756,5.55 c-0.061,0.077-0.537,1.963-1.947,3.94C23.204,26.283,21.962,28,20.076,28c-1.794,0-2.438-1.135-4.508-1.135 c-2.223,0-2.852,1.135-4.554,1.135c-1.886,0-3.22-1.809-4.4-3.496c-1.533-2.208-2.836-5.673-2.882-9 c-0.031-1.763,0.307-3.496,1.165-4.968c1.211-2.055,3.373-3.45,5.734-3.496c1.809-0.061,3.419,1.242,4.523,1.242 c1.058,0,3.036-1.242,5.274-1.242C21.394,7.041,23.97,7.332,25.565,9.785z M15.001,6.688c-0.322-1.61,0.567-3.22,1.395-4.247 c1.058-1.242,2.729-2.085,4.17-2.085c0.092,1.61-0.491,3.189-1.533,4.339C18.098,5.937,16.488,6.872,15.001,6.688z"></path>
+        </svg>
+        <div>
+          <h5 class="font-medium text-sm mt-1 w-20">Apple Pay</h5>
+        </div>
+        <div class="flex gap-2 font-medium mt-1" style="margin-left:5.7rem">
+          <input
+            class="checked-input"
+            type="radio"
+            id="PayPal"
+            name="shipping-type"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="p-1 rounded-2xl ml-3 mt-5 py-3"
+      style="
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 17rem;
+      "
+    >
+      <div class="flex gap-3">
+        <img class="ml-4" width="24" height="24" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/external-Master-Card-payment-methods-those-icons-lineal-color-those-icons.png" alt="external-Master-Card-payment-methods-those-icons-lineal-color-those-icons"/>
+        <div>
+          <h5 class="font-medium text-sm mt-1 w-20">Apple Pay</h5>
+        </div>
+        <div class="flex gap-2 font-medium mt-1" style="margin-left:5.7rem">
+          <input
+            class="checked-input"
+            type="radio"
+            id="PayPal"
+            name="shipping-type"
+          />
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="py-2  mt-8" style="
+            background-color: #fafafa;
+            border-top: 1px solid #c8c8c8;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;">
+            <div class="flex gap-1">
+            <button class="flex text-white bg-black text-center items-center px-5 py-2 rounded-full mt-4 mb-6 ml-4">Continue to payment</button>
+            <button class="flex text-black bg-gray-300 text-center items-center px-5 py-2 rounded-full mt-4 mb-6">Cancel</button>
+          </div>
+        </div>
+    </div>
+
+    <!-- ----------------Modal successful ------------------ -->
+    <div class="flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl">
+        <!-- <img class="mr-36 mt-3" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
+        <img class="ml-36" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
+        <img class="mt-1" width="35" height="35" src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png" alt="shopping-cart--v1"/> -->
+        <img src="./assets/images/logo/ordersuccess.png" alt="ordersuccess" class="w-32 mt-1">
+        <h3 class="font-medium">Order Successful!</h3>
+        <p class="text-sm">You made successfully made order</p>
+        <div class="flex flex-col gap-2">
+            <button class="flex text-white bg-black text-center items-center px-12 py-2 rounded-full mt-4">View order</button>
+            <button class="flex text-black bg-gray-200 text-center font-medium items-center px-10 py-2 rounded-full mb-6">View E-Recipt</button>
+           </div>
+
+             <!-- ----------------Modal unsuccessful ------------------ -->
+    <div class="mt-7 mr-9 flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl">
+        <img class="mr-36 mt-3" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
+        <img class="ml-36" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
+        <img width="95" height="95" src="https://img.icons8.com/clouds/100/no-entry.png" alt="no-entry"/>
+        <h3 class="font-medium">Order Unsuccessful!</h3>
+        <div class="flex flex-col gap-2">
+            <a href="./homePage1.html">
+            <button class="flex text-white bg-black text-center items-center mb-8 px-12 py-2 rounded-full mt-4">Go Home</button>
+        </a>
+    </div>
+  </body>
+</html>

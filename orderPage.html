@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Shop | Orders page</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body style="overflow-x: hidden;">
+    <div class="flex justify-between">
+      <div class="flex ml-3 mt-3 gap-3">
+        <svg
+          width="14"
+          height="31"
+          viewBox="0 0 54 81"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.23355 17.7415C22.2531 10.4389 33.6453 3.542 39.7482 0.499261C44.834 -2.54348 47.1042 9.00132 42.7997 16.7273C38.4952 24.4532 26.5252 28.8982 26.5252 28.8982C26.5252 28.8982 52.9712 22.8128 53.9884 46.1404C54.2537 52.2259 49.9198 59.3256 46.8683 61.3541C43.8168 63.3826 17.3708 79.1034 14.3194 80.6248C10.7425 82.4081 9.23359 77.582 9.23359 71.4965C9.23359 57.2971 25.5081 52.2259 25.5081 52.2259C11.2679 54.2544 2.1135 49.1832 0.0791923 33.9695C-0.598903 28.8982 3.13068 21.1646 9.23355 17.7415Z"
+            fill="black"
+          />
+        </svg>
+
+        <p class="font-medium mt-1">My Orders</p>
+      </div>
+      <svg
+        class="ml-28"
+        style="
+        margin-top: 0.95rem;
+    " xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="25"
+        height="25"
+        viewBox="0 0 30 30"
+      >
+        <path
+          d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+        ></path>
+      </svg>
+      <img src="./assets/images/arrow-icon/top-more.png" alt="top-more-icon" class="w-5 h-5 mt-4 mr-5">
+    </div>
+      <!-- ----------------Active & completed Not Found------------------------- -->
+      <div class="flex mt-5 justify-evenly">
+        <button class="w-1/2 border-b-2 border-black font-medium">Active</button>
+        <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Complete</button>
+      </div>
+      <div class="flex flex-col gap-2 items-center justify-center mt-14">
+      <img src="./assets/images/logo/notfound.png" alt="notfound" style="width: 10rem;height: 10rem;">
+      <h4 class="mt-6 font-bold">You don't hav an order yet</h4>
+          <p class="text-sm">
+            you don't have an orders at this time.
+          </p>
+    </div>
+   <!-- ---------------- Active ------------------------- -->
+   <!-- <div class="flex mt-5 justify-evenly">
+    <button class="w-1/2 border-b-2 border-black font-medium">Active</button>
+    <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Complete</button>
+  </div>
+   <div
+   class="p-1 rounded-2xl w-72 h-36 ml-3 mt-3"
+   style="
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   "
+ >
+   <div class="mt-2 mb-2 ml-2 flex">
+     <svg
+       width="80"
+       height="80"
+       viewBox="0 0 182 182"
+       fill="none"
+       xmlns="http://www.w3.org/2000/svg"
+     >
+       <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+     </svg>
+     <img
+       class="absolute w-16 h-8 ml-1"
+       style="margin-top: 1.25rem"
+       src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+     />
+     <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+   </div>
+   <div
+     style="margin-left: 6rem; margin-top: -3rem; margin-bottom: 0.5rem"
+     class="flex"
+   >
+     <div class="w-4 h-4 rounded-full bg-gray-300">
+       <p
+         class="text-xs flex"
+         style="margin-left: 1.4rem; margin-top: -0.1rem; width: 9rem"
+       >
+         Silver | Size = 42 | Qty = 1
+       </p>
+       <div class="text-xs bg-gray-200 w-20 h-5 mt-2 rounded-md text-center">In Delivery</div>
+       <div class="flex w-screen gap-4">
+       <p class="font-medium text-sm ml-2 mt-2">$105.00</p>
+       <butto class="text-sm mt-2 h-5 rounded-full p-3 text-center items-center flex bg-black text-white">Track Order</button>
+      </div>
+     </div>
+   </div>
+ </div> -->
+  <!-- ---------------- Completed ------------------------- -->
+  <!-- <div class="flex mt-5 justify-evenly">
+    <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Active</button>
+    <button class="w-1/2  border-b-2 border-black font-medium">Complete</button>
+  </div>
+   <div
+   class="p-1 rounded-2xl w-72 h-36 ml-3 mt-3"
+   style="
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   "
+ >
+   <div class="mt-2 mb-2 ml-2 flex">
+     <svg
+       width="80"
+       height="80"
+       viewBox="0 0 182 182"
+       fill="none"
+       xmlns="http://www.w3.org/2000/svg"
+     >
+       <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+     </svg>
+     <img
+       class="absolute w-16 h-8 ml-1"
+       style="margin-top: 1.25rem"
+       src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+     />
+     <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+   </div>
+   <div
+     style="margin-left: 6rem; margin-top: -3rem; margin-bottom: 0.5rem"
+     class="flex"
+   >
+     <div class="w-4 h-4 rounded-full bg-gray-300">
+       <p
+         class="text-xs flex"
+         style="margin-left: 1.4rem; margin-top: -0.1rem; width: 9rem"
+       >
+         Silver | Size = 42 | Qty = 1
+       </p>
+       <div class="text-xs bg-gray-200 w-20 h-5 mt-2 rounded-md text-center">completed</div>
+       <div class="flex w-screen gap-4">
+       <p class="font-medium text-sm ml-2 mt-2">$105.00</p>
+       <butto class="text-sm mt-2 h-5 rounded-full p-3 text-center items-center flex bg-black text-white">Leave Review</button>
+      </div>
+     </div>
+   </div>
+ </div>
+  -->
+    <!-- ------------------footer------------------------- -->
+    <div class="flex flex-col gap-2 mt-3 pb-3 justify-evenly fixed bottom-0 z-50 bg-white w-screen pt-3">
+          <div class="flex gap-8 ml-1">
+        <div>
+          <a href="./homePage1.html">
+            <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+                <path d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"></path>
+                </svg>
+    <p class="text-xs font-medium ml-2">Home</p>     
+    </a>   
+     </div>
+     <div>
+      <a href="./cartPage.html">
+        <img width="22" height="15" src="https://img.icons8.com/material-outlined/24/shopping-bag--v1.png" alt="shopping-bag--v1"/>
+        <p class="text-xs font-medium">Cart</p>     
+    </a>   
+    </div>
+        <div>
+          <!-- <a href="./homePage1.html"> -->
+            <img class="ml-1" width="22" height="20" src="https://img.icons8.com/sf-regular-filled/48/shopping-cart.png" alt="shopping-cart"/>
+              
+              
+        <p class="text-xs font-medium">Orders</p>     
+        <!-- </a>    -->
+        </div>
+        <div>
+          <!-- <a href="./homePage1.html"> -->
+            <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_40_9727)">
+              <path d="M18.204 0.488884C18.5356 0.405939 18.8817 0.399631 19.2161 0.470439C19.5505 0.541247 19.8644 0.687309 20.1339 0.897538C20.4034 1.10777 20.6214 1.37663 20.7715 1.68373C20.9216 1.99083 20.9997 2.32808 21 2.66988V4.49988H21.75C22.3467 4.49988 22.919 4.73694 23.341 5.15889C23.7629 5.58085 24 6.15315 24 6.74988V20.2499C24 20.8466 23.7629 21.4189 23.341 21.8409C22.919 22.2628 22.3467 22.4999 21.75 22.4999H2.25C1.65326 22.4999 1.08097 22.2628 0.65901 21.8409C0.237053 21.4189 1.47137e-07 20.8466 1.47137e-07 20.2499V6.74988C-0.000209191 6.17067 0.222964 5.61368 0.623066 5.19486C1.02317 4.77603 1.56938 4.52764 2.148 4.50138L18.204 0.488884ZM8.343 4.49988H19.5V2.66988C19.4997 2.55609 19.4736 2.44384 19.4235 2.34165C19.3735 2.23945 19.3008 2.14999 19.2111 2.08004C19.1213 2.01008 19.0168 1.96147 18.9055 1.93788C18.7941 1.91429 18.6789 1.91635 18.5685 1.94388L8.343 4.49988ZM2.25 5.99988C2.05109 5.99988 1.86032 6.0789 1.71967 6.21955C1.57902 6.36021 1.5 6.55097 1.5 6.74988V20.2499C1.5 20.4488 1.57902 20.6396 1.71967 20.7802C1.86032 20.9209 2.05109 20.9999 2.25 20.9999H21.75C21.9489 20.9999 22.1397 20.9209 22.2803 20.7802C22.421 20.6396 22.5 20.4488 22.5 20.2499V6.74988C22.5 6.55097 22.421 6.36021 22.2803 6.21955C22.1397 6.0789 21.9489 5.99988 21.75 5.99988H2.25Z" fill="#212529"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_40_9727">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>    
+        <p class="text-xs font-medium">Wallet</p>     
+        <!-- </a>    -->
+        </div>
+        <div>
+          <!-- <a href="./homePage1.html"> -->
+            <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C13.1935 12 14.3381 11.5259 15.182 10.682C16.0259 9.83807 16.5 8.69347 16.5 7.5C16.5 6.30653 16.0259 5.16193 15.182 4.31802C14.3381 3.47411 13.1935 3 12 3C10.8065 3 9.66193 3.47411 8.81802 4.31802C7.97411 5.16193 7.5 6.30653 7.5 7.5C7.5 8.69347 7.97411 9.83807 8.81802 10.682C9.66193 11.5259 10.8065 12 12 12ZM15 7.5C15 8.29565 14.6839 9.05871 14.1213 9.62132C13.5587 10.1839 12.7956 10.5 12 10.5C11.2044 10.5 10.4413 10.1839 9.87868 9.62132C9.31607 9.05871 9 8.29565 9 7.5C9 6.70435 9.31607 5.94129 9.87868 5.37868C10.4413 4.81607 11.2044 4.5 12 4.5C12.7956 4.5 13.5587 4.81607 14.1213 5.37868C14.6839 5.94129 15 6.70435 15 7.5ZM21 19.5C21 21 19.5 21 19.5 21H4.5C4.5 21 3 21 3 19.5C3 18 4.5 13.5 12 13.5C19.5 13.5 21 18 21 19.5ZM19.5 19.494C19.4985 19.125 19.269 18.015 18.252 16.998C17.274 16.02 15.4335 15 12 15C8.565 15 6.726 16.02 5.748 16.998C4.731 18.015 4.503 19.125 4.5 19.494H19.5Z" fill="#212529"/>
+              </svg>
+              
+        <p class="text-xs font-medium">Profile</p>     
+        <!-- </a>    -->
+        </div>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>
