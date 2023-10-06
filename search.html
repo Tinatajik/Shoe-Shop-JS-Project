@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Shop | Search page</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="flex">
+      <svg
+        class="absolute"
+        style="margin-top: 1.2rem; margin-left: 1.3rem"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="20"
+        height="20"
+        viewBox="0 0 30 30"
+      >
+        <path
+          d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+        ></path>
+      </svg>
+      <input
+        type="text"
+        name="search"
+        class="w-11/12 h-7 rounded-lg bg-gray-100 ml-3 mt-4 px-10"
+      />
+      <img
+        src="./assets/images/logo/afilter.png"
+        alt="filter"
+        class="w-5 h-5 absolute"
+        style="margin-left: 16.5rem; margin-top: 1.2rem"
+      />
+    </header>
+    <!-- --------------- Recent Search --------------- -->
+    <!-- <div class="flex mt-4 justify-between font-medium">
+      <p class="ml-4">Recent</p>
+      <p class="mr-4">Clear All</p>
+    </div>
+    <hr class="mt-3 w-11/12 ml-4" />
+    <div class="grid grid-cols-1 gap-3 mt-3 ml-4 text-sm text-gray-500">
+      <div class="flex justify-between">
+        <p>Nike Wrapshot Classic</p>
+        <svg
+          class="mr-4"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="25"
+          height="25"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#000000"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(10.66667,10.66667)">
+              <path
+                d="M18,21h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3v12c0,1.657 -1.343,3 -3,3z"
+                opacity="0.35"
+              ></path>
+              <path
+                d="M14.812,16.215l-7.027,-7.027c-0.384,-0.384 -0.384,-1.008 0,-1.392l0.011,-0.011c0.384,-0.384 1.008,-0.384 1.392,0l7.027,7.027c0.384,0.384 0.384,1.008 0,1.392l-0.011,0.011c-0.384,0.384 -1.008,0.384 -1.392,0z"
+              ></path>
+              <path
+                d="M7.785,14.812l7.027,-7.027c0.384,-0.384 1.008,-0.384 1.392,0l0.011,0.011c0.384,0.384 0.384,1.008 0,1.392l-7.027,7.027c-0.384,0.384 -1.008,0.384 -1.392,0l-0.011,-0.011c-0.384,-0.384 -0.384,-1.008 0,-1.392z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="flex justify-between">
+        <p>Nike Wrapshot Classic</p>
+        <svg
+          class="mr-4"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="25"
+          height="25"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#000000"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(10.66667,10.66667)">
+              <path
+                d="M18,21h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3v12c0,1.657 -1.343,3 -3,3z"
+                opacity="0.35"
+              ></path>
+              <path
+                d="M14.812,16.215l-7.027,-7.027c-0.384,-0.384 -0.384,-1.008 0,-1.392l0.011,-0.011c0.384,-0.384 1.008,-0.384 1.392,0l7.027,7.027c0.384,0.384 0.384,1.008 0,1.392l-0.011,0.011c-0.384,0.384 -1.008,0.384 -1.392,0z"
+              ></path>
+              <path
+                d="M7.785,14.812l7.027,-7.027c0.384,-0.384 1.008,-0.384 1.392,0l0.011,0.011c0.384,0.384 0.384,1.008 0,1.392l-7.027,7.027c-0.384,0.384 -1.008,0.384 -1.392,0l-0.011,-0.011c-0.384,-0.384 -0.384,-1.008 0,-1.392z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="flex justify-between">
+        <p>Nike Wrapshot Classic</p>
+        <svg
+          class="mr-4"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="25"
+          height="25"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#000000"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(10.66667,10.66667)">
+              <path
+                d="M18,21h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3v12c0,1.657 -1.343,3 -3,3z"
+                opacity="0.35"
+              ></path>
+              <path
+                d="M14.812,16.215l-7.027,-7.027c-0.384,-0.384 -0.384,-1.008 0,-1.392l0.011,-0.011c0.384,-0.384 1.008,-0.384 1.392,0l7.027,7.027c0.384,0.384 0.384,1.008 0,1.392l-0.011,0.011c-0.384,0.384 -1.008,0.384 -1.392,0z"
+              ></path>
+              <path
+                d="M7.785,14.812l7.027,-7.027c0.384,-0.384 1.008,-0.384 1.392,0l0.011,0.011c0.384,0.384 0.384,1.008 0,1.392l-7.027,7.027c-0.384,0.384 -1.008,0.384 -1.392,0l-0.011,-0.011c-0.384,-0.384 -0.384,-1.008 0,-1.392z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="flex justify-between">
+        <p>Nike Wrapshot Classic</p>
+        <svg
+          class="mr-4"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="25"
+          height="25"
+          viewBox="0,0,256,256"
+        >
+          <g
+            fill="#000000"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(10.66667,10.66667)">
+              <path
+                d="M18,21h-12c-1.657,0 -3,-1.343 -3,-3v-12c0,-1.657 1.343,-3 3,-3h12c1.657,0 3,1.343 3,3v12c0,1.657 -1.343,3 -3,3z"
+                opacity="0.35"
+              ></path>
+              <path
+                d="M14.812,16.215l-7.027,-7.027c-0.384,-0.384 -0.384,-1.008 0,-1.392l0.011,-0.011c0.384,-0.384 1.008,-0.384 1.392,0l7.027,7.027c0.384,0.384 0.384,1.008 0,1.392l-0.011,0.011c-0.384,0.384 -1.008,0.384 -1.392,0z"
+              ></path>
+              <path
+                d="M7.785,14.812l7.027,-7.027c0.384,-0.384 1.008,-0.384 1.392,0l0.011,0.011c0.384,0.384 0.384,1.008 0,1.392l-7.027,7.027c-0.384,0.384 -1.008,0.384 -1.392,0l-0.011,-0.011c-0.384,-0.384 -0.384,-1.008 0,-1.392z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div> -->
+
+    <!-- ------------------Not Found Search ------------- -->
+    <!-- <div class="flex mt-4 justify-between font-medium">
+      <p class="ml-4">Resault for</p>
+      <p class="mr-4">0 found</p>
+    </div>
+    <div class="flex flex-col gap-2 items-center justify-center mt-14">
+      <img
+        src="./assets/images/logo/notfound.png"
+        alt="notfound"
+        style="width: 10rem; height: 10rem"
+      />
+      <h4 class="mt-6 font-bold">Not Found</h4>
+      <p class="text-sm text-center">
+        Sorry, the keyword you entered cannot<br />
+        be found, please check again or search<br />
+        with another keyword.
+      </p>
+    </div> -->
+
+    <!-- ------------------Resault Search ------------- -->
+    <div class="flex mt-4 justify-between font-medium">
+      <p class="ml-4">Resault for</p>
+      <p class="mr-4">0 found</p>
+    </div>
+    <div class="grid grid-cols-2 -z-20">
+      <div class="mt-5 ml-3">
+        <svg
+          width="130"
+          height="130"
+          viewBox="0 0 182 182"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+        </svg>
+        <img
+          class="absolute w-24 h-14 ml-4"
+          style="margin-top: -6rem"
+          src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        />
+        <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+        <div class="flex mt-2 gap-1">
+          <img
+            src="./assets/images/star-icon/icons8-star-half-empty-24.png"
+            alt="star-icon"
+            class="w-5 h-5 ml-2"
+            style="margin-top: -0.05rem"
+          />
+          <p class="text-xs">4.5</p>
+          <p class="text-xs">|</p>
+          <div class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-1">
+            5,371 sold
+          </div>
+        </div>
+        <p class="text-sm font-semibold ml-2 mt-1">$ 85.00</p>
+      </div>
+      <div class="mt-5 ml-3">
+        <svg
+          width="130"
+          height="130"
+          viewBox="0 0 182 182"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+        </svg>
+        <img
+          class="absolute w-24 h-14 ml-4"
+          style="margin-top: -6rem"
+          src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        />
+        <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+        <div class="flex mt-2 gap-1">
+          <img
+            src="./assets/images/star-icon/icons8-star-half-empty-24.png"
+            alt="star-icon"
+            class="w-5 h-5 ml-2"
+            style="margin-top: -0.05rem"
+          />
+          <p class="text-xs">4.5</p>
+          <p class="text-xs">|</p>
+          <div class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-1">
+            5,371 sold
+          </div>
+        </div>
+        <p class="text-sm font-semibold ml-2 mt-1">$ 85.00</p>
+      </div>
+      <div class="mt-5 ml-3">
+        <svg
+          width="130"
+          height="130"
+          viewBox="0 0 182 182"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+        </svg>
+        <img
+          class="absolute w-24 h-14 ml-4"
+          style="margin-top: -6rem"
+          src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        />
+        <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+        <div class="flex mt-2 gap-1">
+          <img
+            src="./assets/images/star-icon/icons8-star-half-empty-24.png"
+            alt="star-icon"
+            class="w-5 h-5 ml-2"
+            style="margin-top: -0.05rem"
+          />
+          <p class="text-xs">4.5</p>
+          <p class="text-xs">|</p>
+          <div class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-1">
+            5,371 sold
+          </div>
+        </div>
+        <p class="text-sm font-semibold ml-2 mt-1">$ 85.00</p>
+      </div>
+      <div class="mt-5 ml-3">
+        <svg
+          width="130"
+          height="130"
+          viewBox="0 0 182 182"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="182" height="182" rx="24" fill="#F3F3F3" />
+        </svg>
+        <img
+          class="absolute w-24 h-14 ml-4"
+          style="margin-top: -6rem"
+          src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        />
+        <p class="text-sm font-bold ml-2 mt-2">K-Swiss ista Train...</p>
+        <div class="flex mt-2 gap-1">
+          <img
+            src="./assets/images/star-icon/icons8-star-half-empty-24.png"
+            alt="star-icon"
+            class="w-5 h-5 ml-2"
+            style="margin-top: -0.05rem"
+          />
+          <p class="text-xs">4.5</p>
+          <p class="text-xs">|</p>
+          <div class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-1">
+            5,371 sold
+          </div>
+        </div>
+        <p class="text-sm font-semibold ml-2 mt-1">$ 85.00</p>
+      </div>
+    </div>
+  </body>
+</html>
