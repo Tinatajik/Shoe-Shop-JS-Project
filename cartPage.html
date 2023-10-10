@@ -38,8 +38,8 @@
         ></path>
       </svg>
     </div>
-    <div class="grid grid-cols-1 gap-2">
-      <div
+    <div class="grid grid-cols-1 gap-2 mb-40" id="product-card">
+      <!-- <div
         class="p-1 rounded-2xl w-72 ml-3 mt-3"
         style="
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -333,10 +333,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- ----------------------Modal DELETE-------------------- -->
-    <div class="flex flex-col rounded-t-3xl justify-center items-center hidden">
+    <div class="flex flex-col rounded-t-3xl justify-center items-center" id="modal" style="display: none;">
         <div class="w-7 mt-2 h-1 bg-gray-400"></div>
         <h3 class="font-bold mt-3">Remove From Cart?</h3>
         <hr class="w-72 mt-2">
@@ -387,7 +387,7 @@
         </div>
       </div>
       <hr class="w-72 mt-5">
-      <div class="flex mt-3 mb-5 gap-3">
+      <div class="flex mt-3 mb-5 gap-3" >
         <button class="bg-slate-200 rounded-full items-center font-medium px-8 p-3">Cancel</button>
         <button class="bg-black text-white  rounded-full items-center font-medium px-4 p-3">Yes, Remove</button>
       </div>
@@ -397,7 +397,7 @@
         <div class="flex mt-4 mb-5 gap-7">
             <div class="flex flex-col ml-3">
                 <p class="text-sm">Total price</p>
-                <p class="font-bold">$585.00</p>
+                <p class="font-bold" id="total-price"></p>
             </div>
             <a href="./checkout.html">
             <button class="flex text-white bg-black text-center items-center px-10 rounded-full">Checkout <img class="ml-1" width="20" height="20" src="./assets/images/arrow-icon/icons8-arrow-24.png" alt="arrow"/></button>
@@ -455,6 +455,6 @@
     </div>
       </div>
     </div>
-    
+    <script src="./js/cart/cart.js"></script>
   </body>
 </html>

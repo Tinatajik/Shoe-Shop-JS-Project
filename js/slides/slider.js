@@ -23,8 +23,8 @@ slideItemThree.forEach((item) => {
   item.addEventListener("click", () => slideThree(page1, page2, page3));
 });
 
-btnPage1.addEventListener("click", () => slideTwo(page1, page2, page3));
-btnPage2.addEventListener("click", () => slideThree(page1, page2, page3));
-btnPage3.addEventListener("click", () => {
-  window.location.href = "loginPage.html";
-});
+// btnPage1.addEventListener("click", () => slideTwo(page1, page2, page3));
+// btnPage2.addEventListener("click", () => slideThree(page1, page2, page3));
+// btnPage3.addEventListener("click", () => {
+//   window.location.href = "loginPage.html";
+// });

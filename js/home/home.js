@@ -32,7 +32,7 @@ const readProduct = async () => {
   }
 };
 const productsContainer = document.querySelector("#products");
-const addToDom = (list) => {
+export const addToDom = (list) => {
   productsContainer.innerHTML = "";
   list.forEach((elem) => {
     const html = `
@@ -43,7 +43,7 @@ const addToDom = (list) => {
         </svg>
         <img class="absolute w-24 h-14 ml-4" style="margin-top: -6rem;" src="${elem.image}"/> 
         <p class="text-sm font-bold ml-2 mt-2">${elem.title}...</p>  
-        <p class="text-sm font-semibold ml-2 mt-1">${elem.price}</p>   
+        <p class="text-sm font-semibold ml-2 mt-1">$${elem.price}</p>   
     </div>`;
     productsContainer.insertAdjacentHTML("beforeend", html);
   });
@@ -54,16 +54,33 @@ productsContainer.addEventListener("click", (e) => {
   const selectedProduct = e.target.closest(".product");
   const id = selectedProduct.id;
   const quantity = selectedProduct.children[2].innerText;
-  if (Number(quantity) !== 0) {
-    window.location.href = "productPage1.html?id=" + id;
-  } else {
-    window.location.href = "productPage2.html?id=" + id;
-  }
+  window.location.href = "productPage1.html?id=" + id;
 });
-// ------------------Search-----------------------------------------------------------
-// const search = document.querySelector("#search");
-// search.addEventListener("keyup", (e) => {
-//   if (e.keyCode === 13) {
-//     window.location.href = "search.html";
-//   }
-// });
+// ------------------Filter by logo name-----------------------------------------------------------
+const brandLogos = document.querySelectorAll(".brandLogo");
+brandLogos.forEach((logo) => {
+  logo.addEventListener("click", () => {
+    const brandName = logo.dataset.brand;
+    localStorage.setItem("selectedBrand", brandName);
+    window.location.href = `homePage2.html?brand= + ${selectedBrand}`;
+  });
+});
+const brandNameElement = document.getElementById("brandName");
+const brandProductsElement = document.getElementById("products");
+
+// const selectedBrand = localStorage.getItem("selectedBrand");
+// brandNameElement.textContent = selectedBrand;
+// console.log(selectedBrand);
+
+fetch("http://localhost:3000/products")
+  .then((response) => response.json())
+  .then((data) => {
+    const brandProducts = data.products.filter(
+      (product) => product.brand === selectedBrand
+    );
+
+    addToDom(brandProducts);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });

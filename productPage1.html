@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shoe Shop | Product page1</title>
     <link href="./output.css" rel="stylesheet" />
+    <style>
+      .size-option {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+
+      .size-option.selected {
+        background-color: black;
+        color: white;
+      }
+      .color-option {
+        
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+
+      .color-option.selected::before {
+        content: "✔"; /* Checkmark symbol */
+        margin-left: 0.4rem;
+        
+      }
+    </style>
   </head>
   <body>
     <div>
@@ -15,7 +39,7 @@
           class="absolute"
           style="transform: translateX(0); transition: transform 0.6s"
         >
-          <div style="background-color: #f3f3f3; position: absolute">
+          <div style=" position: absolute">
             <a href="./homePage1.html">
               <svg
                 class="ml-4 mt-5"
@@ -33,11 +57,11 @@
                 /></svg
             ></a>
           </div>
-          <div style="background-color: #f3f3f3">
+          <div>
             <img
+            id="image-one"
               alt="image-slide1"
-              style="height: 17rem; width: 19.25rem"
-              src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwbf810f32/nk/d36/b/6/b/7/3/d36b6b73_638c_472e_9187_cc28cb154a60.png?sw=540&sh=540&sm=fit&q=80"
+             
             />
           </div>
           <div
@@ -61,7 +85,7 @@
           class="absolute"
           style="transform: translateX(100%); transition: transform 0.6s"
         >
-          <div style="background-color: #f3f3f3; position: absolute">
+          <div style=" position: absolute">
             <a href="./homePage1.html">
               <svg
                 class="ml-4 mt-5"
@@ -79,11 +103,58 @@
                 /></svg
             ></a>
           </div>
+          <div>
+            <img
+            id="image-two"
+              alt="image-slide2"
+             
+            />
+          </div>
+          <div
+            class="slides flex mb-5 justify-center"
+            style="margin-top: -1.75rem"
+          >
+            <span
+              class="slide-item slide-item-one current-slide w-1 rounded-full bg-slate-500 h-1 mr-1"
+            ></span>
+            <span
+              class="slide-item slide-item-two w-6 rounded-lg bg-black h-1 mr-1"
+            ></span>
+            <span
+              class="slide-item slide-item-three w-1 rounded-full bg-slate-500 h-1"
+            ></span>
+          </div>
+        </div>
+        <!-- page-three -->
+        <div
+          id="page-three"
+          class="absolute"
+          style="transform: translateX(200%); transition: transform 0.6s"
+        >
+          <div style="position: absolute">
+            <a href="./homePage1.html">
+              <svg
+                class="ml-4 mt-5"
+                width="17"
+                height="15"
+                viewBox="0 0 17 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.9998 7.00029C16.9998 7.2655 16.8945 7.51986 16.7069 7.70739C16.5194 7.89493 16.2651 8.00029 15.9998 8.00029H4.41383L8.70783 12.2923C8.80081 12.3853 8.87456 12.4956 8.92488 12.6171C8.9752 12.7386 9.0011 12.8688 9.0011 13.0003C9.0011 13.1318 8.9752 13.262 8.92488 13.3835C8.87456 13.5049 8.80081 13.6153 8.70783 13.7083C8.61486 13.8013 8.50448 13.875 8.383 13.9253C8.26152 13.9757 8.13132 14.0015 7.99983 14.0015C7.86835 14.0015 7.73815 13.9757 7.61667 13.9253C7.49519 13.875 7.38481 13.8013 7.29183 13.7083L1.29183 7.70829C1.19871 7.6154 1.12482 7.50504 1.07441 7.38355C1.024 7.26206 0.998047 7.13182 0.998047 7.00029C0.998047 6.86875 1.024 6.73851 1.07441 6.61702C1.12482 6.49553 1.19871 6.38518 1.29183 6.29229L7.29183 0.292287C7.47961 0.104514 7.73428 -0.000976562 7.99983 -0.000976562C8.26539 -0.000976562 8.52006 0.104514 8.70783 0.292287C8.89561 0.48006 9.0011 0.734735 9.0011 1.00029C9.0011 1.26584 8.89561 1.52051 8.70783 1.70829L4.41383 6.00029H15.9998C16.2651 6.00029 16.5194 6.10564 16.7069 6.29318C16.8945 6.48072 16.9998 6.73507 16.9998 7.00029Z"
+                  fill="black"
+                /></svg
+            ></a>
+          </div>
+        </div>
         <div>
           <img
-            alt="image-slide2"
-            style="height: 17rem; width: 19.25rem; background-color: #f3f3f3"
-            src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwe9707fdc/nk/33a/8/4/8/4/e/33a8484e_2100_4dc8_9cc2_7046171e7161.png?sw=540&sh=540&sm=fit&q=80"
+          id="image-three"
+            alt="image-slide3"
+           
           />
         </div>
         <div
@@ -94,137 +165,113 @@
             class="slide-item slide-item-one current-slide w-1 rounded-full bg-slate-500 h-1 mr-1"
           ></span>
           <span
-            class="slide-item slide-item-two w-6 rounded-lg bg-black h-1 mr-1"
+            class="slide-item slide-item-two w-1 rounded-full bg-slate-500 h-1 mr-1"
           ></span>
           <span
-            class="slide-item slide-item-three w-1 rounded-full bg-slate-500 h-1"
+            class="slide-item slide-item-three w-6 rounded-lg bg-black h-1"
           ></span>
         </div>
       </div>
-      <!-- page-three -->
-      <div
-        id="page-three"
-        class="absolute"
-        style="transform: translateX(200%); transition: transform 0.6s"
-      >
-        <div style="background-color: #f3f3f3; position: absolute">
-          <a href="./homePage1.html">
-            <svg
-              class="ml-4 mt-5"
-              width="17"
-              height="15"
-              viewBox="0 0 17 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M16.9998 7.00029C16.9998 7.2655 16.8945 7.51986 16.7069 7.70739C16.5194 7.89493 16.2651 8.00029 15.9998 8.00029H4.41383L8.70783 12.2923C8.80081 12.3853 8.87456 12.4956 8.92488 12.6171C8.9752 12.7386 9.0011 12.8688 9.0011 13.0003C9.0011 13.1318 8.9752 13.262 8.92488 13.3835C8.87456 13.5049 8.80081 13.6153 8.70783 13.7083C8.61486 13.8013 8.50448 13.875 8.383 13.9253C8.26152 13.9757 8.13132 14.0015 7.99983 14.0015C7.86835 14.0015 7.73815 13.9757 7.61667 13.9253C7.49519 13.875 7.38481 13.8013 7.29183 13.7083L1.29183 7.70829C1.19871 7.6154 1.12482 7.50504 1.07441 7.38355C1.024 7.26206 0.998047 7.13182 0.998047 7.00029C0.998047 6.86875 1.024 6.73851 1.07441 6.61702C1.12482 6.49553 1.19871 6.38518 1.29183 6.29229L7.29183 0.292287C7.47961 0.104514 7.73428 -0.000976562 7.99983 -0.000976562C8.26539 -0.000976562 8.52006 0.104514 8.70783 0.292287C8.89561 0.48006 9.0011 0.734735 9.0011 1.00029C9.0011 1.26584 8.89561 1.52051 8.70783 1.70829L4.41383 6.00029H15.9998C16.2651 6.00029 16.5194 6.10564 16.7069 6.29318C16.8945 6.48072 16.9998 6.73507 16.9998 7.00029Z"
-                fill="black"
-              /></svg
-          ></a>
-        </div>
-      </div>
-      <div>
+      <div class="flex">
+        <p class="font-bold text-2xl ml-3 mt-4" id="product-name">
+          Air Jordan 3 Retro
+        </p>
         <img
-          alt="image-slide3"
-          style="height: 17rem; width: 19.25rem; background-color: #f3f3f3"
-          src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwc06bffa4/nk/378/5/b/8/c/0/3785b8c0_3abd_45e2_a097_1790d9a32d77.png?sw=540&sh=540&sm=fit&q=80"
+          src="./assets/images/like.icon/icons8-heart-64.png"
+          alt="like-icon"
+          class="w-7 h-7 ml-2"
+          style="margin-top: 1.3rem"
         />
       </div>
-      <div class="slides flex mb-5 justify-center" style="margin-top: -1.75rem">
-        <span
-          class="slide-item slide-item-one current-slide w-1 rounded-full bg-slate-500 h-1 mr-1"
-        ></span>
-        <span
-          class="slide-item slide-item-two w-1 rounded-full bg-slate-500 h-1 mr-1"
-        ></span>
-        <span
-          class="slide-item slide-item-three w-6 rounded-lg bg-black h-1"
-        ></span>
+      <div class="flex mt-2 gap-2">
+        <div
+          class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-3"
+          id="product-sold"
+        >
+          5,371 sold
+        </div>
+        <img
+          src="./assets/images/star-icon/icons8-star-half-empty-24.png"
+          alt="star-icon"
+          class="w-5 h-5 ml-2"
+          style="margin-top: -0.05rem"
+        />
+        <span class="text-sm" id="product-rating">4.3 </span
+        ><span class="text-sm">(5,389 reviews)</span>
       </div>
-    </div>
-    <div class="flex">
-      <p class="font-bold text-2xl ml-3 mt-4">Air Jordan 3 Retro</p>
-      <img
-        src="./assets/images/like.icon/icons8-heart-64.png"
-        alt="like-icon"
-        class="w-7 h-7 ml-10"
-        style="margin-top: 1.3rem"
-      />
-    </div>
-    <div class="flex mt-2 gap-2">
-      <div class="text-xs w-16 h-5 bg-gray-200 text-center rounded ml-3">
-        5,371 sold
+      <hr class="mt-4" />
+      <p class="font-bold ml-3 mt-2">Description</p>
+      <p class="text-xs ml-3 mt-1 text-gray-600">
+        In ultricies fermentum aliquet. Pellentesque dui<br />
+        magna, condimentum non ullamcorp<span class="font-bold text-black">
+          view more...</span
+        >
+      </p>
+      <div class="flex mt-3 justify-between">
+        <p class="font-bold ml-3">Size</p>
       </div>
-      <img
-        src="./assets/images/star-icon/icons8-star-half-empty-24.png"
-        alt="star-icon"
-        class="w-5 h-5 ml-2"
-        style="margin-top: -0.05rem"
-      />
-      <span class="text-sm">4.3 (5,389 reviews)</span>
-    </div>
-    <hr class="mt-4" />
-    <p class="font-bold ml-3 mt-2">Description</p>
-    <p class="text-xs ml-3 mt-1 text-gray-600">
-      In ultricies fermentum aliquet. Pellentesque dui<br />
-      magna, condimentum non ullamcorp<span class="font-bold text-black">
-        view more...</span
-      >
-    </p>
-    <div class="flex mt-3 justify-between">
-      <p class="font-bold ml-3">Size</p>
-    </div>
-    <div class="flex gap-3 ml-3 mt-2">
-      <div
-        class="w-7 h-7 rounded-full text-black text-center border-black border-2"
-      >
-        40
+      <div class="flex gap-3 ml-3 mt-2" id="sizes">
+        <div
+          class="w-7 h-7 rounded-full text-black text-center border-black border-2 size-option sizeOption"
+          data-size="40"
+          id="size-1"
+        >
+          40
+        </div>
+        <div
+          class="w-7 h-7 rounded-full text-black text-center border-black border-2 size-option sizeOption"
+          id="size-2"
+          data-size="41"
+        >
+          41
+        </div>
+        <div class="w-7 h-7 rounded-full bg-black text-white text-center size-option sizeOption" id="size-3" data-size="42">42
       </div>
-      <div
-        class="w-7 h-7 rounded-full text-black text-center border-black border-2"
-      >
-        41
-      </div>
-      <div class="w-7 h-7 rounded-full bg-black text-white text-center">42</div>
     </div>
     <div style="margin-left: 9rem; margin-top: -3.5rem">
       <p class="font-bold mr-32">Color</p>
       <div style="overflow-x: scroll" class="flex gap-3 w-40">
-        <div class="flex gap-2 mt-1">
-          <div class="w-7 h-7 rounded-full bg-gray-200"><svg xmlns="http://www.w3.org/2000/svg" style="    margin-left: 0.3rem;
-            margin-top: 0.2rem;" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30">
-            <path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path>
-            </svg></div>
-          <div class="w-7 h-7 rounded-full bg-slate-500"></div>
-          <div class="w-7 h-7 rounded-full bg-purple-500"></div>
-          <div class="w-7 h-7 rounded-full bg-amber-700"></div>
-          <div class="w-7 h-7 rounded-full bg-cyan-500"></div>
-          <div class="w-7 h-7 rounded-full bg-red-700"></div>
-          <div class="w-7 h-7 rounded-full bg-red-300"></div>
-          <div class="w-7 h-7 rounded-full bg-green-300"></div>
+        <div class="flex gap-2 mt-1" id="colors">
+          <div class="w-7 h-7 rounded-full bg-gray-200 color-option colorOption" id="color-1" data-color="Gray"></div>
+          <div class="w-7 h-7 rounded-full bg-green-500 color-option colorOption" id="color-2" data-color="Green"></div>
+          <div class="w-7 h-7 rounded-full bg-purple-500 color-option colorOption" id="color-3" data-color="Purple"></div>
+          <div class="w-7 h-7 rounded-full bg-orange-400 color-option colorOption" id="color-4" data-color="Orange"></div>
+          <div class="w-7 h-7 rounded-full bg-blue-500 color-option colorOption" id="color-5" data-color="Blue"></div>
+          <div class="w-7 h-7 rounded-full bg-red-700 color-option colorOption" id="color-6" data-color="Red"></div>
+          <div class="w-7 h-7 rounded-full bg-red-300 color-option colorOption" id="color-7" data-color="Pink"></div>
         </div>
       </div>
     </div>
     <div class="flex font-bold mt-5 gap-3">
-    <p class="ml-3">Quantity</p>
-    <div class="bg-gray-200 flex gap-4 px-3 rounded-full py-1">
+      <p class="ml-3">Quantity</p>
+      <div class="bg-gray-200 flex gap-4 px-3 rounded-full py-1" id="quantity">
         <p>-</p>
-        <p>2</p>
+        <p id="product-number">2</p>
         <p>+</p>
+      </div>
     </div>
+    <hr class="mt-5" />
+    <div class="flex mt-4 mb-5 gap-7">
+      <div class="flex flex-col ml-3">
+        <p class="text-sm">Total price</p>
+        <p class="font-bold" id="total-price">$240.00</p>
       </div>
-      <hr class="mt-5">
-      <div class="flex mt-4 mb-5 gap-7">
-        <div class="flex flex-col ml-3">
-            <p class="text-sm">Total price</p>
-            <p class="font-bold">$240.00</p>
-        </div>
-        <button class="flex text-white bg-black text-center items-center px-10 rounded-full"><img class="mr-3" width="23" height="23" src="./assets/images/bag-icon/icons8-bag-24.png" alt="shopaholic"/>Add to Cart</button>
-      </div>
-   
+      <button
+      class="flex text-white bg-black text-center items-center px-10 rounded-full"
+        id="add-to-cart"
+        class="flex"
+      >
+        <img
+          class="mr-3"
+          width="23"
+          height="23"
+          src="./assets/images/bag-icon/icons8-bag-24.png"
+          alt="shopaholic"
+        />Add to Cart
+      </button>
+    </div>
+
     <script type="module" src="./js/slides/slider.js"></script>
+    <script type="module" src="./js/product/product.js"></script>
   </body>
 </html>
