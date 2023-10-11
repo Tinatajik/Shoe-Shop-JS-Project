@@ -1,5 +1,6 @@
 const API_URL = "http://localhost:3000";
 const listContainer = document.querySelector("#list-container");
+const lastPrice = document.querySelector("#last-price");
 const addToOrder = (list) => {
   list.forEach((elem) => {
     const html = `
@@ -37,7 +38,7 @@ const addToOrder = (list) => {
       >
         ${elem.color} | Size = ${elem.size}
       </p>
-      <p class="font-medium text-sm ml-2 mt-2">$${elem.totalPrice}</p>
+      <p class="font-medium text-sm ml-2 mt-2 ">$<span class="total-price-items">${elem.totalPrice}</span></p>
     </div>
     <div class="flex font-bold mt-5 gap-3">
       <div class="bg-gray-200 flex gap-4 px-2 ml-32 mt-1 rounded-full">
@@ -54,17 +55,29 @@ const readProduct = async () => {
     const res = await fetch(`${API_URL}/carts`);
     const data = await res.json();
     addToOrder(data);
+    changeTotalPrice();
   } catch (error) {
     console.log(error);
   }
 };
-readProduct();
 //----------------- Choose Shipping---------------------
-const selectedShipping = localStorage.getItem("selectedShipping");
-const selectedShippingContainer = document.getElementById("selectedShipping");
+function chooseShipping() {
+  const selectedShipping = localStorage.getItem("selectedShipping");
+  const selectedShippingContainer = document.getElementById("selectedShipping");
+  // Retrieve the selectedItems string from localStorage
+  const selectedItemsString = localStorage.getItem("selectedItems");
 
-if (selectedShipping) {
-  selectedShippingContainer.innerHTML = `
+  // Parse the selectedItems string to convert it back to an object
+  const selectedItems = JSON.parse(selectedItemsString);
+
+  // Use the selectedItems object to display the selected photo and price on the checkout page
+  const photoElement = document.getElementById("selectedPhoto");
+  const priceElement = document.getElementById("selectedPrice");
+
+  // photoElement.src = selectedItems.photo;
+  // priceElement.textContent = selectedItems.price;
+  if (selectedShipping) {
+    selectedShippingContainer.innerHTML = `
   <div class="flex gap-3">
   <img
     src="./assets/images/chooseshipping/2.png"
@@ -76,13 +89,21 @@ if (selectedShipping) {
     <p class="text-xs text-zinc-600">Estimated Arrival. Dec 20-22</p>
   </div>
   <div class="flex gap-2 font-medium">
-    <label for="economy" class="mt-2 ml-3"></label>
+    <label for="economy" class="mt-2 ml-3">${selectedItems.price}</label>
   </div>
 </div>
 </div>`;
-  localStorage.removeItem("selectedShipping");
-} else {
-  selectedShippingContainer.innerHTML = `   <img src="./assets/images/chooseshipping/truck.png" alt="truck-icon" class="w-5 h-5 ml-2">
+    const shippingPrice = document.querySelector("#shipping-price");
+    shippingPrice.innerHTML = `${selectedItems.price}`;
+    console.log(+selectedItems.price.split("").slice(1).join(""));
+    lastPrice.innerHTML = `$${
+      +lastPrice.dataset.price +
+      +selectedItems.price.split("").slice(1).join("")
+    }.00`;
+    console.log(lastPrice.dataset.price);
+    localStorage.removeItem("selectedShipping");
+  } else {
+    selectedShippingContainer.innerHTML = `   <img src="./assets/images/chooseshipping/truck.png" alt="truck-icon" class="w-5 h-5 ml-2">
   <div>
     <h5 class="font-medium text-sm">Choose Shipping Type</h5>
   </div>
@@ -92,33 +113,49 @@ if (selectedShipping) {
 </a>
    </div>
 </div>`;
+  }
 }
+///////////////////// Amount ////////////////////////////
+const amountPrice = document.querySelector("#amount-price");
+const changeTotalPrice = () => {
+  const totalPriceItems = document.querySelectorAll(".total-price-items");
+  let userTotalPrice = 0;
+  totalPriceItems.forEach((item) => {
+    userTotalPrice += Number(item.innerText);
+  });
+  amountPrice.innerText = `$${userTotalPrice}.00`;
+  lastPrice.innerHTML = `$${userTotalPrice}.00`;
+  lastPrice.dataset.price = userTotalPrice;
+  chooseShipping();
+};
+
 ///////////////// promo code ////////////////////////////
 const addPromoCode = document.querySelector("#add-promo-code");
 const userCode = document.querySelector("#user-code");
 const promoPriceRow = document.querySelector("#promo-price-row");
-const lastPrice = document.querySelector("#last-price");
+
 const userSelectedPromoCode = document.querySelector(
   "#user-selected-promo-code"
 );
 
 const calculateDiscount = (value) => {
+  console.log(value);
   userCode.value = `Discount ${value}% Off`;
   userCode.classList.add("input-bold-style");
-
-  // =================calculate whole cost =================
+  // userCode.style.display = "none";
+  console.log(lastPrice.innerText);
   const totalCostBeforDiscount = lastPrice.innerText.match(/\d+/)[0];
   const discountCost = Math.round((totalCostBeforDiscount * value) / 100);
   const totalCostAfterDiscount = totalCostBeforDiscount - discountCost;
   lastPrice.innerText = `$${totalCostAfterDiscount}`;
-  // ================= end calculate whole cost =================
   userSelectedPromoCode.innerText = `-$${discountCost}`;
   promoPriceRow.style.display = "flex";
 };
 const searchForEnterPromoCode = async (code) => {
   try {
-    const res = await fetch(`${API_URL}/promoCode?codeNumber_like=${code}`);
+    const res = await fetch(`${API_URL}/promoCode?codeNumber=${code}`);
     const data = await res.json();
+    console.log(data);
     if (data.length === 1) {
       calculateDiscount(data[0].value);
     }
@@ -135,3 +172,4 @@ const paymentButton = document.getElementById("payment-button");
 paymentButton.addEventListener("click", () => {
   window.location.href = "paymentMethods.html";
 });
+readProduct();

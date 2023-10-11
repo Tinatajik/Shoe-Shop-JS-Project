@@ -62,7 +62,7 @@ brandLogos.forEach((logo) => {
   logo.addEventListener("click", () => {
     const brandName = logo.dataset.brand;
     localStorage.setItem("selectedBrand", brandName);
-    window.location.href = `homePage2.html?brand=${selectedBrand}`;
+    window.location.href = `homePage2.html?brand=${brandName}`;
   });
 });
 const brandNameElement = document.getElementById("brandName");
@@ -75,7 +75,7 @@ console.log(selectedBrand);
 fetch("http://localhost:3000/products")
   .then((response) => response.json())
   .then((data) => {
-    const brandProducts = data.products.filter(
+    const brandProducts = data.filter(
       (product) => product.brand === selectedBrand
     );
 
@@ -84,3 +84,16 @@ fetch("http://localhost:3000/products")
   .catch((error) => {
     console.error("Error:", error);
   });
+//--------------- MOST POPULAR --------------------------------]
+// const popular = document.getElementById("most-popular");
+// popular.addEventListener("click", () => {
+//   const mostPopular = async () => {
+//     try {
+//       const res = await fetch(`${API_URL}/products?mostPopular=true`);
+//       const data = await res.json();
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+//   mostPopular();
+// });

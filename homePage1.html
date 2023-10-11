@@ -141,7 +141,7 @@
     <!-- -----------------Company logo-------------------- -->
     <div id="companies-logo">
       <div class="flex gap-4">
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="nike">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -160,7 +160,7 @@
           />
           <span class="ml-6 text-sm font-medium">Nike</span>
         </div>
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="adidas">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -181,7 +181,7 @@
             >Adidas</span
           >
         </div>
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="puma">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -200,7 +200,7 @@
           />
           <span class="text-sm font-medium ml-5">Puma</span>
         </div>
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="asics">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -221,7 +221,7 @@
         </div>
       </div>
       <div class="flex gap-4">
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="reebok">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -240,7 +240,7 @@
           />
           <span class="ml-4 text-sm font-medium">Reebok</span>
         </div>
-        <div class="brandLogo" id="reebok">
+        <div class="brandLogo" data-brand="new balance">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -261,7 +261,7 @@
             >New Ba..</span
           >
         </div>
-        <div class="brandLogo">
+        <div class="brandLogo" data-brand="converse">
           <svg
             class="mt-4 ml-4"
             width="45"
@@ -305,7 +305,8 @@
     </div>
     <!-- ------------------------------------------------------------------------ -->
       <div class="flex justify-between mt-6 font-medium">
-        <p class="ml-4 text-base">Most Popular</p>
+        <a href="./homePage2.html">
+        <p class="ml-4 text-base" id="most-popular">Most Popular</p></a>
         <p class="mr-4 text-sm">See All</p>
       </div>
       <div style="overflow-x: scroll" class="flex gap-3 scrollbar -z-10">
@@ -315,37 +316,45 @@
           All
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="nike"
+          
         >
           Nike
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="adidas"
         >
           Adidas
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="puma"
         >
           Puma
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="asics"
         >
           Asics
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="reebok"
         >
           Reebok
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="new balance"
         >
           New<span class="ml-1">Balance</span>
         </button>
         <button
-          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium"
+          class="border-black border-2 rounded-full h-7 pr-4 pl-4 mt-3 font-medium brandLogo"
+          data-brand="converse"
         >
           Converse
         </button>

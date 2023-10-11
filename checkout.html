@@ -256,7 +256,7 @@
             <div id="promo-code">
             <p class="text-sm font-medium mt-3 ml-2">Promo Code</p>
             <div class="flex gap-2 mt-3">
-            <input id="user-code"  type="number" name="promo-code" placeholder="Enter Promo code" style="width: 15rem" class="bg-gray-200 rounded-full ml-2 py-3 px-3">
+            <input id="user-code"  type="text" name="promo-code" placeholder="Enter Promo code" style="width: 15rem" class="bg-gray-200 rounded-full ml-2 py-3 px-3">
             <button class="w-7 h-7 mt-2 rounded-full bg-black text-white text-sm" id="add-promo-code">+</button>
         </div>
         </div>
@@ -269,11 +269,11 @@
             <div class="flex flex-col text-sm gap-2">
                 <div class="flex justify-between">
                     <p class="ml-1">Amount</p>
-                    <p class="mr-1 font-medium">$585.00</p>
+                    <p class="mr-1 font-medium"  id="amount-price"></p>
                 </div>
                 <div class="flex justify-between">
                     <p class="ml-1">Shipping</p>
-                    <p class="mr-1 font-medium">-</p>
+                    <p class="mr-1 font-medium" id="shipping-price"></p>
                 </div>
                 <div class="total-price-row flex justify-between" id="promo-price-row">
                   <p class="ml-1">Promo</p>
@@ -282,7 +282,7 @@
                 <hr>
                 <div class="flex justify-between">
                     <p class="ml-1">Total</p>
-                    <p class="mr-1 font-medium" id="last-price">-</p>
+                    <p class="mr-1 font-medium" id="last-price"></p>
                 </div>
             </div>
             </div>

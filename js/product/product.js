@@ -51,9 +51,11 @@ const fillUserSelectedProperties = (data) => {
   userSelectedProperties.name = data.title;
   userSelectedProperties.image = data.image;
   userSelectedProperties.price = data.price;
+  console.log(data.price);
   userSelectedProperties.totalPrice = data.price;
 };
 const addToCard = async (data) => {
+  console.log(data);
   try {
     const res = await fetch(`${API_URL}/carts`, {
       method: "POST",
@@ -129,10 +131,12 @@ productQuantity.addEventListener("click", (e) => {
   totalPrice.innerText = `$ ${
     userSelectedProperties.quantity * userSelectedProperties.price
   }.00`;
-  userSelectedProperties.totalPrice = totalPrice.innerText;
+  userSelectedProperties.totalPrice = ` ${
+    userSelectedProperties.quantity * userSelectedProperties.price
+  }.00;`;
 });
 // // -------------------------- Add to cart -----------------------
 addToCartButton.addEventListener("click", () => {
-  userSelectedProperties.id = addToCard(userSelectedProperties);
+  addToCard(userSelectedProperties);
   window.location.href = "cartPage.html";
 });

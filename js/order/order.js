@@ -102,7 +102,12 @@ const readOrder = async () => {
   }
 };
 readOrder();
-
+window.addEventListener("load", (event) => {
+  activeButton.classList.add("activ-header-button");
+  completeButton.classList.remove("activ-header-button");
+  activeContainer.style.display = "grid";
+  completeContainer.style.display = "none";
+});
 activeButton.addEventListener("click", () => {
   activeButton.classList.add("activ-header-button");
   completeButton.classList.remove("activ-header-button");

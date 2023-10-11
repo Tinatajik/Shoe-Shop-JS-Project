@@ -36,13 +36,17 @@
       />
     </header>
     <!-- --------------- Recent Search --------------- -->
-    <!-- <div class="flex mt-4 justify-between font-medium">
+    <div id="searchHistory">
+      <!-- <div class="flex mt-4 justify-between font-medium">
       <p class="ml-4">Recent</p>
       <p class="mr-4">Clear All</p>
     </div>
     <hr class="mt-3 w-11/12 ml-4" />
-    <div class="grid grid-cols-1 gap-3 mt-3 ml-4 text-sm text-gray-500">
-      <div class="flex justify-between">
+    <div
+      class="grid grid-cols-1 gap-3 mt-3 ml-4 text-sm text-gray-500"
+      
+    > -->
+      <!-- <div class="flex justify-between">
         <p>Nike Wrapshot Classic</p>
         <svg
           class="mr-4"
@@ -209,13 +213,14 @@
             </g>
           </g>
         </svg>
-      </div>
-    </div> -->
+      </div> -->
+      <!-- </div> -->
+    </div>
 
     <!-- ------------------Not Found Search ------------- -->
     <div class="flex mt-4 justify-between font-medium">
       <p class="ml-4">Resault for<span id="resault-for" class="ml-1"></span></p>
-      <p class="mr-4">0 found</p>
+      <p class="mr-4" id="lentgh-found">found</p>
     </div>
     <div
       class="flex flex-col gap-2 items-center justify-center mt-14"
@@ -240,7 +245,7 @@
       <p class="ml-4">Resault for</p>
       <p class="mr-4">0 found</p>
     </div> -->
-    <div class="grid grid-cols-2 -z-20" id="searchResaults">
+    <div class="grid grid-cols-2 -z-20" id="searchResults">
       <!-- <div class="mt-5 ml-3">
         <svg
           width="130"

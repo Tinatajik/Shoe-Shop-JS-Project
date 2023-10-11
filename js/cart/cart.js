@@ -71,9 +71,9 @@ const addToCards = (list, listContainer) => {
           <div class="flex font-bold mt-5 gap-3">
             <div class="bg-gray-200 flex gap-4 px-2 ml-20
              mt-1 rounded-full"  id="quantity">
-              <p>-</p>
-              <p>${elem.quantity}</p>
-              <p>+</p>
+              <p class="decreaseButton">-</p>
+              <p class="quantityValue">${elem.quantity}</p>
+              <p class="increaseButton" >+</p>
             </div>
           </div>
         </div>
@@ -152,7 +152,28 @@ const deleteFromServer = async (id) => {
   }
 };
 //----------------------Quantity-------------------------------
+cardsContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("decreaseButton")) {
+    const quantityValue = cardsContainer.querySelector(".quantityValue");
+    let quantity = parseInt(quantityValue.textContent);
+    // Decrease the quantity by 1 if it's greater than 1
+    if (quantity > 1) {
+      quantity--;
+      quantityValue.textContent = quantity;
+    }
+  }
 
+  // Check if the clicked element is the increase button
+  if (event.target.classList.contains("increaseButton")) {
+    // Get the quantity value element
+    const quantityValue = cardsContainer.querySelector(".quantityValue");
+    // Get the current quantity value
+    let quantity = parseInt(quantityValue.textContent);
+    // Increase the quantity by 1
+    quantity++;
+    quantityValue.textContent = quantity;
+  }
+});
 //----------------------Read------------------------------------
 const readCarts = async () => {
   try {
@@ -160,7 +181,6 @@ const readCarts = async () => {
     const data = await res.json();
     addToCards(data, cardsContainer);
     changeTotalPrice();
-    // changeQuantity();
   } catch (error) {
     console.log(error);
   }
