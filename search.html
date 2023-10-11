@@ -213,29 +213,33 @@
     </div> -->
 
     <!-- ------------------Not Found Search ------------- -->
-    <!-- <div class="flex mt-4 justify-between font-medium">
-      <p class="ml-4">Resault for</p>
+    <div class="flex mt-4 justify-between font-medium">
+      <p class="ml-4">Resault for<span id="resault-for" class="ml-1"></span></p>
       <p class="mr-4">0 found</p>
     </div>
-    <div class="flex flex-col gap-2 items-center justify-center mt-14">
+    <div
+      class="flex flex-col gap-2 items-center justify-center mt-14"
+      style="display: none"
+      id="not-found-page"
+    >
       <img
         src="./assets/images/logo/notfound.png"
         alt="notfound"
-        style="width: 10rem; height: 10rem"
+        style="width: 10rem; height: 10rem; margin-left: 4rem"
       />
-      <h4 class="mt-6 font-bold">Not Found</h4>
+      <h4 class="mt-6 font-bold ml-28">Not Found</h4>
       <p class="text-sm text-center">
         Sorry, the keyword you entered cannot<br />
         be found, please check again or search<br />
         with another keyword.
       </p>
-    </div> -->
+    </div>
 
     <!-- ------------------Resault Search ------------- -->
-    <div class="flex mt-4 justify-between font-medium">
+    <!-- <div class="flex mt-4 justify-between font-medium">
       <p class="ml-4">Resault for</p>
       <p class="mr-4">0 found</p>
-    </div>
+    </div> -->
     <div class="grid grid-cols-2 -z-20" id="searchResaults">
       <!-- <div class="mt-5 ml-3">
         <svg
@@ -362,5 +366,6 @@
         <p class="text-sm font-semibold ml-2 mt-1">$ 85.00</p>
       </div> -->
     </div>
+    <script src="./js/search/search.js"></script>
   </body>
 </html>

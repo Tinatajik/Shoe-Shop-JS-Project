@@ -42,30 +42,37 @@
       <img src="./assets/images/arrow-icon/top-more.png" alt="top-more-icon" class="w-5 h-5 mt-4 mr-5">
     </div>
       <!-- ----------------Active & completed Not Found------------------------- -->
+      <style>
+        .activ-header-button {
+  border-bottom: 2px solid black !important;
+  color: black;
+}
+      </style>
       <div class="flex mt-5 justify-evenly">
-        <button class="w-1/2 border-b-2 border-black font-medium">Active</button>
-        <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Complete</button>
+        <button class="w-1/2 border-b-2 border-b-gray-300  text-gray-300  font-medium" id="active-button" class="activ-header-button">Active</button>
+        <button class="w-1/2 border-b-2 border-b-gray-300  text-gray-300 font-medium" id="complete-button" class="activ-header-button">Complete</button>
       </div>
-      <div class="flex flex-col gap-2 items-center justify-center mt-14">
+      <!-- <div class="flex flex-col gap-2 items-center justify-center mt-14">
       <img src="./assets/images/logo/notfound.png" alt="notfound" style="width: 10rem;height: 10rem;">
       <h4 class="mt-6 font-bold">You don't hav an order yet</h4>
           <p class="text-sm">
             you don't have an orders at this time.
           </p>
-    </div>
+    </div> -->
    <!-- ---------------- Active ------------------------- -->
-   <!-- <div class="flex mt-5 justify-evenly">
+   <!-- <div class="flex mt-5 justify-evenly" >
     <button class="w-1/2 border-b-2 border-black font-medium">Active</button>
     <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Complete</button>
-  </div>
-   <div
+  </div> -->
+  <div id="active-list">
+   <!-- <div
    class="p-1 rounded-2xl w-72 h-36 ml-3 mt-3"
    style="
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
        0 6px 20px 0 rgba(0, 0, 0, 0.19);
    "
  >
-   <div class="mt-2 mb-2 ml-2 flex">
+    <div class="mt-2 mb-2 ml-2 flex" >
      <svg
        width="80"
        height="80"
@@ -101,12 +108,14 @@
      </div>
    </div>
  </div> -->
+</div>
   <!-- ---------------- Completed ------------------------- -->
-  <!-- <div class="flex mt-5 justify-evenly">
+ <!-- <div class="flex mt-5 justify-evenly">
     <button class="w-1/2 border-b-2 border-b-gray-300 text-gray-300 font-medium">Active</button>
     <button class="w-1/2  border-b-2 border-black font-medium">Complete</button>
-  </div>
-   <div
+  </div> -->
+  <div id="complete-list">
+   <!-- <div
    class="p-1 rounded-2xl w-72 h-36 ml-3 mt-3"
    style="
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -147,9 +156,9 @@
        <butto class="text-sm mt-2 h-5 rounded-full p-3 text-center items-center flex bg-black text-white">Leave Review</button>
       </div>
      </div>
-   </div>
- </div>
-  -->
+   </div> 
+ </div> -->
+</div>
     <!-- ------------------footer------------------------- -->
     <div class="flex flex-col gap-2 mt-3 pb-3 justify-evenly fixed bottom-0 z-50 bg-white w-screen pt-3">
           <div class="flex gap-8 ml-1">
@@ -202,5 +211,6 @@
     </div>
       </div>
     </div>
+    <script src="./js/order/order.js"></script>
   </body>
 </html>

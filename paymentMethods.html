@@ -169,41 +169,45 @@
       </div>
     </div>
       </div>
-      <div class="py-2  mt-8" style="
+      <div id="buttons" class="py-2  mt-8" style="
             background-color: #fafafa;
             border-top: 1px solid #c8c8c8;
             border-top-left-radius: 35px;
             border-top-right-radius: 35px;">
-            <div class="flex gap-1">
-            <button class="flex text-white bg-black text-center items-center px-5 py-2 rounded-full mt-4 mb-6 ml-4">Continue to payment</button>
-            <button class="flex text-black bg-gray-300 text-center items-center px-5 py-2 rounded-full mt-4 mb-6">Cancel</button>
+            <div class="flex gap-1" >
+            <button id="btn-continue" class="flex text-white bg-black text-center items-center px-5 py-2 rounded-full mt-4 mb-6 ml-4">Continue to payment</button>
+            <button id="btn-cancel" class="flex text-black bg-gray-300 text-center items-center px-5 py-2 rounded-full mt-4 mb-6">Cancel</button>
           </div>
         </div>
     </div>
 
     <!-- ----------------Modal successful ------------------ -->
-    <div class="flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl">
-        <!-- <img class="mr-36 mt-3" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
-        <img class="ml-36" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
-        <img class="mt-1" width="35" height="35" src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png" alt="shopping-cart--v1"/> -->
-        <img src="./assets/images/logo/ordersuccess.png" alt="ordersuccess" class="w-32 mt-1">
-        <h3 class="font-medium">Order Successful!</h3>
-        <p class="text-sm">You made successfully made order</p>
+    <div id="modal-success" class="px-5 flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl" style="display: none;z-index: 50;
+     position: absolute;
+     margin-top: -29rem;
+     background-color:white;">
+        <img src="./assets/images/logo/ordersuccess.png" alt="ordersuccess" class="w-32 mt-1 ml-5">
+        <h3 class="font-medium ml-5">Order Successful!</h3>
+        <p class="text-sm">You made successfully order</p>
         <div class="flex flex-col gap-2">
-            <button class="flex text-white bg-black text-center items-center px-12 py-2 rounded-full mt-4">View order</button>
+          <a href="./orderPage.html"> <button class="flex text-white bg-black text-center items-center px-12 py-2 rounded-full mt-4">View order</button></a>
             <button class="flex text-black bg-gray-200 text-center font-medium items-center px-10 py-2 rounded-full mb-6">View E-Recipt</button>
            </div>
-
-             <!-- ----------------Modal unsuccessful ------------------ -->
-    <div class="mt-7 mr-9 flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl">
+</div>
+             <!------------------Modal unsuccessful ------------------ -->
+    <div id="modal-unsuccess" class="mt-7 mr-9 flex flex-col items-center w-56 h-80 border-2 border-black ml-10 rounded-xl" style="display: none;position: absolute;
+    margin-top: -29rem;
+    z-index: 50;
+    background-color:white;">
         <img class="mr-36 mt-3" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
         <img class="ml-36" width="40" height="40" src="https://img.icons8.com/windows/32/filled-circle.png" alt="filled-circle"/>
-        <img width="95" height="95" src="https://img.icons8.com/clouds/100/no-entry.png" alt="no-entry"/>
-        <h3 class="font-medium">Order Unsuccessful!</h3>
-        <div class="flex flex-col gap-2">
+        <img class="ml-14" width="95" height="95" src="https://img.icons8.com/clouds/100/no-entry.png" alt="no-entry"/>
+        <h3 class="font-medium ml-7">Order Unsuccessful!</h3>
+        <div class="flex flex-col gap-2 ml-5">
             <a href="./homePage1.html">
             <button class="flex text-white bg-black text-center items-center mb-8 px-12 py-2 rounded-full mt-4">Go Home</button>
         </a>
     </div>
+    <script src="./js/payment/payment.js"></script>
   </body>
 </html>

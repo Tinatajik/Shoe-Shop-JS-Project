@@ -2,18 +2,28 @@ const API_URL = "http://localhost:3000";
 const cardsContainer = document.querySelector("#product-card");
 const showTotalPrice = document.querySelector("#total-price");
 const productQuantity = document.querySelector("#quantity");
+const cancelButton = document.querySelector("#cancel-button");
+const removeButton = document.querySelector("#remove-button");
+const removeButtonContainer = document.querySelector("#remove-item-container");
+const modal = document.querySelector("#modal");
+const footer = document.querySelector("#footer");
+
 //-------------------------Add to cart -----------------------
 const addToCards = (list, listContainer) => {
+  listContainer.innerHTML = "";
   list.forEach((elem) => {
+    console.log(elem);
     const html = `
         <div
-        class="p-1 rounded-2xl w-72 ml-3 mt-3"
+        data-id="${elem.id}"
+        id="parent-container"
+        class="p-1 rounded-2xl w-72 ml-3 mt-3 card"
         style="
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
         "
       >
-        <div class="mt-2 mb-2 ml-2 flex">
+        <div class="mt-2 mb-2 ml-2 flex" >
           <svg
             width="80"
             height="80"
@@ -24,13 +34,13 @@ const addToCards = (list, listContainer) => {
             <rect width="182" height="182" rx="24" fill="#F3F3F3" />
           </svg>
           <img
-            class="absolute w-14 h-8 ml-1"
+            class="absolute w-14 h-8 ml-3"
             style="margin-top: 1.25rem"
             src="${elem.image}"
           />
           <p class="text-sm font-bold ml-2 mt-2">${elem.name}...</p>
           <svg
-          id="modal-button"
+          id="delete-btn"
             class="mt-2 ml-5"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -52,11 +62,11 @@ const addToCards = (list, listContainer) => {
           <div class="w-4 h-4 rounded-full ml-4" style="background-color:${elem.color} ;">
             <p
               class="text-sm"
-              style="margin-left: 1.4rem; margin-top: -0.17rem; width: 7rem"
+              style="margin-left: 1.4rem; margin-top: -0.17rem; width: 9rem"
             >
               ${elem.color} | Size = ${elem.size}
             </p>
-            <p class="font-medium text-sm ml-2 mt-2 w-16 total-price-items">${elem.totalPrice}</p>
+            <p class="font-medium text-sm ml-2 mt-2 w-16 ">$<span class="total-price-items">${elem.totalPrice}</span></p>
           </div>
           <div class="flex font-bold mt-5 gap-3">
             <div class="bg-gray-200 flex gap-4 px-2 ml-20
@@ -81,9 +91,69 @@ const changeTotalPrice = () => {
   });
   showTotalPrice.innerText = `$${userTotalPrice}.00`;
 };
-//--------------------------- Quantity -----------------------------------
 
-// read data from server
+//--------------------------- Delete Modal -----------------------------------
+async function updateTotalPrice() {
+  try {
+    // Fetch the original total price from your data source (e.g., JSON Server)
+    const response = await fetch(`${API_URL}/carts`);
+    const originalTotalPrice = await response.json();
+
+    // Calculate the updated total price (subtract the price of the deleted product)
+    const deletedProductPrice = "";
+    const updatedTotalPrice = Number(originalTotalPrice - deletedProductPrice);
+
+    // Update the displayed total price in your HTML
+    showTotalPrice.textContent = `$${Number(updatedTotalPrice.toFixed(2))}`;
+  } catch (error) {
+    console.error("Error updating total price:", error);
+  }
+}
+cardsContainer.addEventListener("click", (event) => {
+  if (event.target && event.target.id === "delete-btn") {
+    console.log(event.target.closest("#parent-container").dataset.id);
+    modal.style.display = "block";
+    footer.style.display = "none";
+    cardsContainer.style.opacity = "0.2";
+    readModal(event.target.closest("#parent-container").dataset.id);
+  }
+  cancelButton.addEventListener("click", () => {
+    modal.style.display = "none";
+    footer.style.display = "block";
+    cardsContainer.style.opacity = "1";
+  });
+  removeButton.addEventListener("click", () => {
+    deleteFromServer(event.target.closest("#parent-container").dataset.id);
+    modal.style.display = "none";
+    footer.style.display = "block";
+    cardsContainer.style.opacity = "1";
+    readCarts();
+    updateTotalPrice();
+  });
+});
+const readModal = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/carts?id=${id}`);
+    const data = await res.json();
+    console.log(data);
+    addToCards(data, removeButtonContainer);
+  } catch (error) {
+    console.log(error);
+  }
+};
+const deleteFromServer = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/carts/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+//----------------------Quantity-------------------------------
+
+//----------------------Read------------------------------------
 const readCarts = async () => {
   try {
     const res = await fetch(`${API_URL}/carts`);

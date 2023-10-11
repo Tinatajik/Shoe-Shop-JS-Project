@@ -62,15 +62,15 @@ brandLogos.forEach((logo) => {
   logo.addEventListener("click", () => {
     const brandName = logo.dataset.brand;
     localStorage.setItem("selectedBrand", brandName);
-    window.location.href = `homePage2.html?brand= + ${selectedBrand}`;
+    window.location.href = `homePage2.html?brand=${selectedBrand}`;
   });
 });
 const brandNameElement = document.getElementById("brandName");
 const brandProductsElement = document.getElementById("products");
 
-// const selectedBrand = localStorage.getItem("selectedBrand");
-// brandNameElement.textContent = selectedBrand;
-// console.log(selectedBrand);
+const selectedBrand = localStorage.getItem("selectedBrand");
+brandNameElement.textContent = selectedBrand;
+console.log(selectedBrand);
 
 fetch("http://localhost:3000/products")
   .then((response) => response.json())

@@ -336,16 +336,12 @@
       </div> -->
     </div>
     <!-- ----------------------Modal DELETE-------------------- -->
-    <div class="flex flex-col rounded-t-3xl justify-center items-center" id="modal" style="display: none;">
-        <div class="w-7 mt-2 h-1 bg-gray-400"></div>
-        <h3 class="font-bold mt-3">Remove From Cart?</h3>
-        <hr class="w-72 mt-2">
-        <div
-        class="p-1 rounded-2xl w-72  mt-5"
-        style="
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        "
+    <div class="flex flex-col rounded-t-3xl  w-screen fixed bottom-0 z-10 bg-white" id="modal" style="display: none;">
+        <div class="w-7 mt-2 ml-36 h-1 bg-gray-400"></div>
+        <h3 class="font-bold mt-3 ml-20">Remove From Cart?</h3>
+        <hr class="w-72 mt-2 ml-3">
+        <div id="remove-item-container"
+        class="rounded-2xl w-72  mt-5 "
       >
         <div class="mt-2 mb-2 ml-2 flex">
           <svg
@@ -357,7 +353,8 @@
           >
             <rect width="182" height="182" rx="24" fill="#F3F3F3" />
           </svg>
-          <img
+          <div id="modal-container">
+          <!-- <img
             class="absolute w-16 h-8 ml-1"
             style="margin-top: 1.25rem"
             src="https://s3-alpha-sig.figma.com/img/a629/ce53/76b7019ca8c73dbf4f6e12c310d1cc39?Expires=1696809600&Signature=mJBwxaBXtr8ieePSIoSXtng5zs5TiQzG-GUuj28zVn4iaEKuN2xdUAEg2TjSFsweBZEGnuMwxhuCHWR4KXIpjLc3t~O1Rt1S3lA0VdNF4tAZTP81GQ8W4P8uAthO2CkgizmkQIgrhRhnLmmOYThZrCcy1n88-Acj5ZXDfJ6d0J26dG4fcwWscmfOcboKGLVuWB3V1oD~hZA7ni4H4l3f-kNdSOXTYZJaStJ8MUu~SQc9w7lwks~50~CfVP-LIeuzybQPeoFLjN9StGO3kiaXKZJNMYqyCdY8GCzIWkjrKUAkXa~tdNfgBF9~61FeOzcan7aZh2dRzrIlyK3UGgoQmg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
@@ -383,17 +380,18 @@
               <p>1</p>
               <p>+</p>
             </div>
+          </div> -->
           </div>
         </div>
       </div>
-      <hr class="w-72 mt-5">
-      <div class="flex mt-3 mb-5 gap-3" >
-        <button class="bg-slate-200 rounded-full items-center font-medium px-8 p-3">Cancel</button>
-        <button class="bg-black text-white  rounded-full items-center font-medium px-4 p-3">Yes, Remove</button>
+      <hr class="w-72 mt-5 ml-3">
+      <div class="flex mt-3 mb-5 gap-3" id="modal-buttons" style="margin-left: 2.25rem;">
+        <button class="bg-slate-200 rounded-full items-center font-medium px-8 p-3" id="cancel-button">Cancel</button>
+        <button class="bg-black text-white  rounded-full items-center font-medium px-4 p-3" id="remove-button">Yes, Remove</button>
       </div>
     </div>
     <!-- ------------------footer------------------------- -->
-    <div class="flex flex-col gap-2 mt-3 pb-3 justify-evenly fixed bottom-0 z-50 bg-white w-screen pt-3">
+    <div class="flex flex-col gap-2 mt-3 pb-3 justify-evenly fixed bottom-0 z-10 bg-white w-screen pt-3" id="footer">
         <div class="flex mt-4 mb-5 gap-7">
             <div class="flex flex-col ml-3">
                 <p class="text-sm">Total price</p>
