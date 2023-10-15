@@ -131,9 +131,9 @@ productQuantity.addEventListener("click", (e) => {
   totalPrice.innerText = `$ ${
     userSelectedProperties.quantity * userSelectedProperties.price
   }.00`;
-  userSelectedProperties.totalPrice = ` ${
+  userSelectedProperties.totalPrice = `${
     userSelectedProperties.quantity * userSelectedProperties.price
-  }.00;`;
+  }.00`;
 });
 // // -------------------------- Add to cart -----------------------
 addToCartButton.addEventListener("click", () => {
